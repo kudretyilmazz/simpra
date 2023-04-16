@@ -1,0 +1,10 @@
+@import "./mixins";
+.tree {
+	width: 600px;
+	height: auto;
+	margin-top: 100px;
+	position: relative;
+	&.drop {
+		@include TreeShake(3s, 0);
+	}
+}

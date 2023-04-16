@@ -1,0 +1,46 @@
+// Import Variables
+@import "./variables";
+
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	font-family: $globalFont;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+	font-family: $globalFont;
+}
+
+body {
+	background: $bodyBackgroundColor;
+}
+
+.app {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	column-gap: 100px;
+	.game {
+		display: flex;
+		column-gap: 100px;
+		.game-area {
+			position: relative;
+			.basket {
+				position: absolute;
+				bottom: 0;
+				right: -300px;
+			}
+		}
+		.controls {
+			align-self: center;
+			display: flex;
+			column-gap: 20px;
+		}
+	}
+}

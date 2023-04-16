@@ -1,0 +1,19 @@
+@import "_mixins.scss";
+
+.apple {
+	position: absolute;
+	width: 50px;
+	&.drop {
+		-webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+		-moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+		-o-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+		transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+		top: calc(100% - 50px) !important;
+		@include AppleShake(3s, 0s);
+	}
+	&.collect {
+		transition-duration: 0.5s !important;
+		z-index: 1;
+		overflow: auto !important;
+	}
+}
