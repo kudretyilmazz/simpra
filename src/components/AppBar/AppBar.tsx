@@ -19,8 +19,10 @@ function AppBar() {
 	const numberOfApples = useAppSelector(state => getNumberOfApples(state));
 
 	return (
-		<div className="appbar">
-			<div className="game-count">Plays: {gameCount}</div>
+		<div className="appbar" data-testid="appbar">
+			<div className="game-count" data-testid="gamecount">
+				Plays: {gameCount}
+			</div>
 			<div className="auto-collect">
 				Auto Collect:
 				<input

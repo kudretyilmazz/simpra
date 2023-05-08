@@ -16,7 +16,11 @@ function Button(props: IButton) {
 
 	return (
 		<button {...props} id={name} className="button">
-			{icon && <div className="icon">{icon}</div>}
+			{icon && (
+				<div className="icon" role="document">
+					{icon}
+				</div>
+			)}
 			{label}
 		</button>
 	);
